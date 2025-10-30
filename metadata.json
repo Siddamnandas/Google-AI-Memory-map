@@ -1,0 +1,7 @@
+{
+  "name": "MemoryKeeper PWA",
+  "description": "A mobile-first Progressive Web App to help seniors preserve memories and enhance cognitive function through personalized, story-driven brain games and daily journaling, powered by AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

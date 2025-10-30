@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 24 20% 98%; /* light-cream */
+    --foreground: 20 14% 4%; /* near-black */
+    --card: 24 25% 99%;
+    --card-foreground: 20 14% 4%;
+    --popover: 24 25% 99%;
+    --popover-foreground: 20 14% 4%;
+    --primary: 8 84% 67%; /* coral-500 */
+    --primary-foreground: 355 100% 97%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 8 84% 67%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+/* Custom colors for the app */
+body {
+    --light-cream: #FAF8F5;
+    --coral-100: #FFEAE6;
+    --coral-200: #FFD5CC;
+    --coral-500: #FF6F61;
+    --coral-600: #E66456;
+    --coral-700: #CC594C;
+    --coral-800: #B34E42;
+    --mint-50: #F0FAF7;
+    --mint-100: #D8F2E8;
+    --mint-500: #48C9A2;
+    --mint-600: #40B491;
+    --sky-50: #EFF8FF;
+    --sky-100: #D6EDFF;
+    --sky-500: #55B4FF;
+    --sky-600: #4DA1E6;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-once {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-in-out;
+}
+
+.animate-pulse-once {
+    animation: pulse-once 0.6s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* For Memory Match Up game cards */
+.perspective {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
